@@ -12,7 +12,7 @@ class Solution:
         #   - l.next = l.next.next
         # time: O(n), space: O(1)
 
-        dummy = ListNode(0, head)
+        dummy = ListNode(0, head) # use dummy to handle removing the first node
         left, right = dummy, dummy
 
         for _ in range(n):
@@ -25,18 +25,6 @@ class Solution:
         left.next = left.next.next
 
         return dummy.next
-
-        # while right.next and i < n:
-        #     right = right.next
-        #     i += 1
-
-        # while right and right.next:
-        #     right = right.next
-        #     left = left.next
-
-        # left.next = left.next.next
-
-        # return head
 
 
         # another solution I came up with but didn't use
