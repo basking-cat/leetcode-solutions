@@ -8,6 +8,8 @@ class Solution:
         # time: O(nlogm) where m is max(piles) and n is the length of piles
         # space: O(1)
 
+        # binary search can be used when something is monotonic (not just limited to array)
+
         left, right = 1, max(piles)
 
         while left < right:
